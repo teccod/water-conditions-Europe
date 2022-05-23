@@ -2,7 +2,7 @@ version: '3.6'
 services:
   iris:
     build: 
-      context: .
+      context: ./iris
       dockerfile: Dockerfile
     restart: always
     command: --check-caps false -a "sh /opt/irisapp/server_start.sh"
@@ -13,5 +13,34 @@ services:
       - 8080:8080
       - 8888:8888
     volumes:
-      - ./:/irisdev/app
-      - ./src:/opt/irisapp/src
+      - ./iris/:/irisdev/app
+      - ./iris/src:/opt/irisapp/src
+
+  atscale:
+    image: ghcr.io/intersystems-community/atscale-server:master
+    restart: always
+    tty: true
+    hostname: atscale
+    volumes:
+      - data:/opt/atscale/data
+      - conf:/opt/atscale/conf
+      - log:/opt/atscale/log
+      - ./atscale-server/atscale.yaml:/root/atscale.yaml
+      - ./atscale-server/src/entrypoint.sh:/root/entrypoint.sh
+      - ./atscale-server/src/connections:/root/connections
+      - ./atscale-server/src/cubes:/root/cubes
+      - ./atscale-server/src/license:/root/license
+    ports:
+      - 10500:10500
+      - 10502:10502
+      - 10503:10503
+      - 10525:10525
+      - 11111:11111
+volumes:
+  data:
+  conf:
+  log:
+
+networks:
+  default:
+    name: DC-Public
