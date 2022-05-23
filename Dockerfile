@@ -24,3 +24,7 @@ ENV IRISPASSWORD=SYS
 ENV IRISNAMESPACE=IRISAPP
 
 RUN pip3 install -r ${SRC_PATH}/src/requirements.txt
+
+RUN pip3 install jupyter
+RUN mkdir /home/irisowner/.local/share/jupyter/kernels/irispython
+COPY misc/kernels/irispython/* /home/irisowner/.local/share/jupyter/kernels/irispython/

@@ -26,11 +26,11 @@ Property PopulationDensity As %Library.Double [ SqlColumnNumber = 12 ];
 
 Property TerraMarineProtected20162018 As %Library.Double [ SqlColumnNumber = 13, SqlFieldName = TerraMarineProtected_2016_2018 ];
 
-Property TouristMean19902020 As %Library.Currency [ SqlColumnNumber = 14, SqlFieldName = TouristMean_1990_2020 ];
+Property TouristMean19902020 As %Library.Double [ SqlColumnNumber = 14, SqlFieldName = TouristMean_1990_2020 ];
 
-Property VenueCount As %Library.Currency [ SqlColumnNumber = 15 ];
+Property VenueCount As %Library.Double [ SqlColumnNumber = 15 ];
 
-Property netMigration20112018 As %Library.Currency [ SqlColumnNumber = 16, SqlFieldName = netMigration_2011_2018 ];
+Property netMigration20112018 As %Library.Double [ SqlColumnNumber = 16, SqlFieldName = netMigration_2011_2018 ];
 
 Property droughtsfloodstemperature As %Library.Double [ SqlColumnNumber = 17, SqlFieldName = droughts_floods_temperature ];
 
@@ -38,27 +38,27 @@ Property literacyRate20102018 As %Library.Double [ SqlColumnNumber = 18, SqlFiel
 
 Property combustibleRenewables20092014 As %Library.Double [ SqlColumnNumber = 19, SqlFieldName = combustibleRenewables_2009_2014 ];
 
-Property gdp As %Library.Currency [ SqlColumnNumber = 20 ];
+Property gdp As %Library.Double [ SqlColumnNumber = 20 ];
 
-Property compositionfoodorganicwastepercent As %Library.Currency [ SqlColumnNumber = 21, SqlFieldName = composition_food_organic_waste_percent ];
+Property compositionfoodorganicwastepercent As %Library.Double [ SqlColumnNumber = 21, SqlFieldName = composition_food_organic_waste_percent ];
 
-Property compositionglasspercent As %Library.Currency [ SqlColumnNumber = 22, SqlFieldName = composition_glass_percent ];
+Property compositionglasspercent As %Library.Double [ SqlColumnNumber = 22, SqlFieldName = composition_glass_percent ];
 
-Property compositionmetalpercent As %Library.Currency [ SqlColumnNumber = 23, SqlFieldName = composition_metal_percent ];
+Property compositionmetalpercent As %Library.Double [ SqlColumnNumber = 23, SqlFieldName = composition_metal_percent ];
 
-Property compositionotherpercent As %Library.Currency [ SqlColumnNumber = 24, SqlFieldName = composition_other_percent ];
+Property compositionotherpercent As %Library.Double [ SqlColumnNumber = 24, SqlFieldName = composition_other_percent ];
 
-Property compositionpapercardboardpercent As %Library.Currency [ SqlColumnNumber = 25, SqlFieldName = composition_paper_cardboard_percent ];
+Property compositionpapercardboardpercent As %Library.Double [ SqlColumnNumber = 25, SqlFieldName = composition_paper_cardboard_percent ];
 
-Property compositionplasticpercent As %Library.Currency [ SqlColumnNumber = 26, SqlFieldName = composition_plastic_percent ];
+Property compositionplasticpercent As %Library.Double [ SqlColumnNumber = 26, SqlFieldName = composition_plastic_percent ];
 
-Property compositionrubberleatherpercent As %Library.Currency [ SqlColumnNumber = 27, SqlFieldName = composition_rubber_leather_percent ];
+Property compositionrubberleatherpercent As %Library.Double [ SqlColumnNumber = 27, SqlFieldName = composition_rubber_leather_percent ];
 
-Property compositionwoodpercent As %Library.Currency [ SqlColumnNumber = 28, SqlFieldName = composition_wood_percent ];
+Property compositionwoodpercent As %Library.Double [ SqlColumnNumber = 28, SqlFieldName = composition_wood_percent ];
 
-Property compositionyardgardengreenwastepercent As %Library.Currency [ SqlColumnNumber = 29, SqlFieldName = composition_yard_garden_green_waste_percent ];
+Property compositionyardgardengreenwastepercent As %Library.Double [ SqlColumnNumber = 29, SqlFieldName = composition_yard_garden_green_waste_percent ];
 
-Property wastetreatmentrecyclingpercent As %Library.Currency [ SqlColumnNumber = 30, SqlFieldName = waste_treatment_recycling_percent ];
+Property wastetreatmentrecyclingpercent As %Library.Double [ SqlColumnNumber = 30, SqlFieldName = waste_treatment_recycling_percent ];
 
 Parameter USEEXTENTSET = 1;
 

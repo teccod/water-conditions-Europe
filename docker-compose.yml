@@ -11,6 +11,7 @@ services:
       - 32792:52773
       - 53773
       - 8080:8080
+      - 8888:8888
     volumes:
       - ./:/irisdev/app
       - ./src:/opt/irisapp/src

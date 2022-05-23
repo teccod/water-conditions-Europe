@@ -7,6 +7,7 @@
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.data.teccod.waterPollution.CLS"/>
+      <Resource Name="dc.data.teccod.Countries.CLS"/>
       <Resource Name="globals.GBL"/>
     </Module>
   </Document>
