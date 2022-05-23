@@ -1,0 +1,9 @@
+requests
+pandas
+gunicorn
+flask
+numpy
+Flask-Cors
+tensorflow
+sklearn
+JayDeBeApi
