@@ -13,6 +13,7 @@ import time
 from dateutil.relativedelta import relativedelta
 from sklearn.model_selection import train_test_split
 import jaydebeapi
+from pickle import load, dump
 
 pd.set_option('display.max_columns', 30)
 
@@ -30,8 +31,8 @@ dataTable = 'dc_data_teccod.waterPollution'
 df = pd.read_sql("select * from %s" % dataTable, conn)
 
 # drop irrelevant data
+df = df.drop('parameterWaterBodyCategory_label',axis=1)
 df = df.dropna(axis='rows')
-
 df = df.loc[df['parameterWaterBodyCategory'] == 'RW']
 df = df.loc[df['procedureAnalysedFraction'] == 'total']
 df = df.loc[df['procedureAnalysedMedia'] == 'water']
@@ -45,6 +46,8 @@ for i in range(len(df)):
    mask.append(mask_condition[df['observedPropertyDeterminandCode'][i]])
 df = df.loc[mask]
 df = df.reset_index(drop=True)
+
+np.save('waterBodyIdentifier.npy',df['waterBodyIdentifier'].unique())
 
 # dunctions to transform data
 def OHE_function(data):
@@ -96,7 +99,7 @@ def observedPropertyDeterminandCode_function(data):
   return (OHE_from_labels_function(data,labels))
 
 def waterBodyIdentifier_function(data):
-  labels = list(df['waterBodyIdentifier'].unique())
+  labels = list(np.load('waterBodyIdentifier.npy', allow_pickle= True))
   return (index_from_labels_function(data,labels))
 
 def Country_function(data):
@@ -108,71 +111,75 @@ def Country_function(data):
        'Belarus', 'Russia']
   return (OHE_from_labels_function(data,labels))
 
-# getter
-x_data = []
-y_data = []
-for i in range(len(df)):
-  observedPropertyDeterminandCode = observedPropertyDeterminandCode_function(df['observedPropertyDeterminandCode'][i])[0]
-  phenomenonTimeReferenceYear = np.array(df['phenomenonTimeReferenceYear'][i] - 2006)
-  parameterSamplingPeriod = np.array(days_ammount_function(df['parameterSamplingPeriod'][i]))
-  resultMeanValue = np.array(df['resultMeanValue'][i])
-  waterBodyIdentifier = waterBodyIdentifier_function(df['waterBodyIdentifier'][i])
-  Country = Country_function(df['Country'][i])[0]
+def getter(df):
+  x_data = []
+  y_data = []
+  for i in range(len(df)):
+    observedPropertyDeterminandCode = observedPropertyDeterminandCode_function(df['observedPropertyDeterminandCode'][i])[0]
+    phenomenonTimeReferenceYear = np.array(df['phenomenonTimeReferenceYear'][i] - 2006)
+    parameterSamplingPeriod = np.array(days_ammount_function(df['parameterSamplingPeriod'][i]))
+    resultMeanValue = np.array(df['resultMeanValue'][i])
+    waterBodyIdentifier = waterBodyIdentifier_function(df['waterBodyIdentifier'][i])
+    Country = Country_function(df['Country'][i])[0]
 
 
-  PopulationDensity = np.array(df['PopulationDensity'][i])
-  TerraMarineProtected_2016_2018 = np.array(df['TerraMarineProtected_2016_2018'][i])
-  TouristMean_1990_2020 = np.array(df['TouristMean_1990_2020'][i])
-  VenueCount = np.array(df['VenueCount'][i])
-  netMigration_2011_2018 = np.array(df['netMigration_2011_2018'][i])
-  droughts_floods_temperature = np.array(df['droughts_floods_temperature'][i])
-  literacyRate_2010_2018 = np.array(df['literacyRate_2010_2018'][i])
-  combustibleRenewables_2009_2014 = np.array(df['combustibleRenewables_2009_2014'][i])
-  gdp = np.array(df['gdp'][i])
-  composition_food_organic_waste_percent = np.array(df['composition_food_organic_waste_percent'][i]/100)
-  composition_glass_percent = np.array(df['composition_glass_percent'][i]/100)
-  composition_metal_percent = np.array(df['composition_metal_percent'][i]/100)
-  composition_other_percent = np.array(df['composition_other_percent'][i]/100)
-  composition_paper_cardboard_percent = np.array(df['composition_paper_cardboard_percent'][i]/100)
-  composition_plastic_percent = np.array(df['composition_plastic_percent'][i]/100)
-  composition_rubber_leather_percent = np.array(df['composition_rubber_leather_percent'][i]/100)
-  composition_wood_percent = np.array(df['composition_wood_percent'][i]/100)
-  composition_yard_garden_green_waste_percent = np.array(df['composition_yard_garden_green_waste_percent'][i]/100)
-  waste_treatment_recycling_percent = np.array(df['waste_treatment_recycling_percent'][i]/100)
+    PopulationDensity = np.array(df['PopulationDensity'][i])
+    TerraMarineProtected_2016_2018 = np.array(df['TerraMarineProtected_2016_2018'][i])
+    TouristMean_1990_2020 = np.array(df['TouristMean_1990_2020'][i])
+    VenueCount = np.array(df['VenueCount'][i])
+    netMigration_2011_2018 = np.array(df['netMigration_2011_2018'][i])
+    droughts_floods_temperature = np.array(df['droughts_floods_temperature'][i])
+    literacyRate_2010_2018 = np.array(df['literacyRate_2010_2018'][i])
+    combustibleRenewables_2009_2014 = np.array(df['combustibleRenewables_2009_2014'][i])
+    gdp = np.array(df['gdp'][i])
+    composition_food_organic_waste_percent = np.array(df['composition_food_organic_waste_percent'][i]/100)
+    composition_glass_percent = np.array(df['composition_glass_percent'][i]/100)
+    composition_metal_percent = np.array(df['composition_metal_percent'][i]/100)
+    composition_other_percent = np.array(df['composition_other_percent'][i]/100)
+    composition_paper_cardboard_percent = np.array(df['composition_paper_cardboard_percent'][i]/100)
+    composition_plastic_percent = np.array(df['composition_plastic_percent'][i]/100)
+    composition_rubber_leather_percent = np.array(df['composition_rubber_leather_percent'][i]/100)
+    composition_wood_percent = np.array(df['composition_wood_percent'][i]/100)
+    composition_yard_garden_green_waste_percent = np.array(df['composition_yard_garden_green_waste_percent'][i]/100)
+    waste_treatment_recycling_percent = np.array(df['waste_treatment_recycling_percent'][i]/100)
 
 
-  x_data.append(np.hstack([observedPropertyDeterminandCode,
-                      phenomenonTimeReferenceYear,
-                      parameterSamplingPeriod,
-                      waterBodyIdentifier,
-                      Country,
-                      PopulationDensity,
-                      TerraMarineProtected_2016_2018,
-                      TouristMean_1990_2020,
-                      VenueCount,
-                      netMigration_2011_2018,
-                      droughts_floods_temperature,
-                      literacyRate_2010_2018,
-                      combustibleRenewables_2009_2014,
-                      gdp,
-                      composition_food_organic_waste_percent,
-                      composition_glass_percent,
-                      composition_metal_percent,
-                      composition_other_percent,
-                      composition_paper_cardboard_percent,
-                      composition_plastic_percent,
-                      composition_rubber_leather_percent,
-                      composition_wood_percent,
-                      composition_yard_garden_green_waste_percent,
-                      waste_treatment_recycling_percent]))
-  y_data.append(np.array(resultMeanValue))
-x_data = np.array(x_data)
-y_data = np.array(y_data)
-y_data = np.expand_dims(y_data, axis=1)
+    x_data.append(np.hstack([observedPropertyDeterminandCode,
+                        phenomenonTimeReferenceYear,
+                        parameterSamplingPeriod,
+                        waterBodyIdentifier,
+                        Country,
+                        PopulationDensity,
+                        TerraMarineProtected_2016_2018,
+                        TouristMean_1990_2020,
+                        VenueCount,
+                        netMigration_2011_2018,
+                        droughts_floods_temperature,
+                        literacyRate_2010_2018,
+                        combustibleRenewables_2009_2014,
+                        gdp,
+                        composition_food_organic_waste_percent,
+                        composition_glass_percent,
+                        composition_metal_percent,
+                        composition_other_percent,
+                        composition_paper_cardboard_percent,
+                        composition_plastic_percent,
+                        composition_rubber_leather_percent,
+                        composition_wood_percent,
+                        composition_yard_garden_green_waste_percent,
+                        waste_treatment_recycling_percent]))
+    y_data.append(np.array(resultMeanValue))
+  x_data = np.array(x_data)
+  y_data = np.array(y_data)
+  y_data = np.expand_dims(y_data, axis=1)
+  return(x_data, y_data)
+
+x_data, y_data = getter(df)
 
 # data normalization
 y_scaler = StandardScaler()
 y_data = y_scaler.fit_transform(y_data)
+dump(y_scaler, open('y_scaler.pkl', 'wb'))
 
 x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.1)
 
