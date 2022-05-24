@@ -1,9 +1,0 @@
-requests
-pandas
-gunicorn
-flask
-numpy
-dash
-dash-daq
-dash-bootstrap-components
-markdown

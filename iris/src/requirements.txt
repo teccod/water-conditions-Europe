@@ -8,3 +8,9 @@ tensorflow
 sklearn
 JayDeBeApi
 IPython
+dash
+dash-daq
+dash-bootstrap-components
+markdown
+iris
+JayDeBeApi

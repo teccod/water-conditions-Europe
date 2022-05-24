@@ -1,4 +1,3 @@
-# Commented out IPython magic to ensure Python compatibility.
 import numpy as np 
 import pandas as pd
 from tensorflow.keras import utils
@@ -17,6 +16,7 @@ import jaydebeapi
 
 pd.set_option('display.max_columns', 30)
 
+# set our connection tio IRIS
 url = "jdbc:IRIS://localhost:1972/IRISAPP"
 driver = "com.intersystems.jdbc.IRISDriver"
 user = "SuperUser"
@@ -29,9 +29,9 @@ curs = conn.cursor()
 dataTable = 'dc_data_teccod.waterPollution'
 df = pd.read_sql("select * from %s" % dataTable, conn)
 
+# drop irrelevant data
 df = df.dropna(axis='rows')
 
-# drop unnecessary data
 df = df.loc[df['parameterWaterBodyCategory'] == 'RW']
 df = df.loc[df['procedureAnalysedFraction'] == 'total']
 df = df.loc[df['procedureAnalysedMedia'] == 'water']
@@ -46,7 +46,7 @@ for i in range(len(df)):
 df = df.loc[mask]
 df = df.reset_index(drop=True)
 
-
+# dunctions to transform data
 def OHE_function(data):
   label_encoder = LabelEncoder()
   rezult = label_encoder.fit_transform(data)
@@ -108,6 +108,7 @@ def Country_function(data):
        'Belarus', 'Russia']
   return (OHE_from_labels_function(data,labels))
 
+# getter
 x_data = []
 y_data = []
 for i in range(len(df)):
@@ -169,14 +170,13 @@ x_data = np.array(x_data)
 y_data = np.array(y_data)
 y_data = np.expand_dims(y_data, axis=1)
 
-print(x_data.shape)
-print(y_data.shape)
-
+# data normalization
 y_scaler = StandardScaler()
 y_data = y_scaler.fit_transform(y_data)
 
 x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.1)
 
+# model training
 water_model = Sequential()
 water_model.add(BatchNormalization(input_dim=x_data.shape[1]))
 water_model.add(Dense(1024, activation='relu'))
@@ -209,9 +209,9 @@ history = water_model.fit(x_train,
                     validation_split=0.1, 
                     verbose=1)
 
-water_model.save('model_19_615.h5')
+#water_model.save('water_model.h5')
 
-water_model.load_model('model2.h5')
+#water_model.load_model('water_modell.h5')
 
 def eval_net(model, x_train, y_train, y_scaler = None, n = 10, limit = 1000.):
   
