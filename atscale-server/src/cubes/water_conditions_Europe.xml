@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.atscale.com/xsd/project_2_0" name="water_conditions_Europe" version="2" xsi:schemaLocation="http://www.atscale.com/xsd/project_2_0 ../../../../../core/src/main/resources/com/atscale/engine/schema/project_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <annotations>
+    <annotation name="migrationVersion">2021.3.0.3934</annotation>
+    <annotation name="version">4</annotation>
+    <annotation name="engineId">f6a69b13-bc54-4231-5951-b049e0ef0571</annotation>
+    <annotation name="versionTag"></annotation>
+    <annotation name="publishDate">Published on May 25, 2022 at 1:21pm (UTC)</annotation>
+  </annotations>
+  <properties>
+    <caption>water_conditions_Europe</caption>
+    <visible>true</visible>
+    <aggressive-aggregate-promotion>false</aggressive-aggregate-promotion>
+    <aggregate-prediction>
+      <speculative-aggregates>false</speculative-aggregates>
+    </aggregate-prediction>
+  </properties>
+  <attributes>
+    <attribute-key id="a0cb33a3-6c4e-451e-a185-ae5463a3bea0">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="f3858f0b-d940-4164-acdb-0992225db6ab">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="9e2062ad-5c97-4ac4-9f66-8233ddd3e637">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="d9d66f17-c78a-418c-9a9f-77e52f3e798d">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="fa5d8d20-03fd-46d8-a3c3-1c518bbf65f5">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="0b730183-ddf1-4398-8ae1-5e62d9fae39d">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="b554bb2f-094a-4e07-aed1-96b898b3eb88">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <keyed-attribute id="e2c54cb6-7807-47e7-507d-3f97c656a357" key-ref="a0cb33a3-6c4e-451e-a185-ae5463a3bea0" name="Country">
+      <properties>
+        <caption>Country</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="af4e1e6d-a2b9-40f3-576b-c063c53c4d13" key-ref="f3858f0b-d940-4164-acdb-0992225db6ab" name="Water_Body">
+      <properties>
+        <caption>Water_Body</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="b5b0af9d-3fc4-46aa-5451-903c13620b70" key-ref="9e2062ad-5c97-4ac4-9f66-8233ddd3e637" name="Whater_Body_Label">
+      <properties>
+        <caption>Whater_Body_Label</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <key-ref id="d9d66f17-c78a-418c-9a9f-77e52f3e798d"></key-ref>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="fdb2268d-8cea-46c8-55c1-29e0eafeb528" key-ref="fa5d8d20-03fd-46d8-a3c3-1c518bbf65f5" name="Measured_substance">
+      <properties>
+        <caption>Measured_substance</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="a999fad1-d0b6-4481-6193-c1a95553a1e6" key-ref="0b730183-ddf1-4398-8ae1-5e62d9fae39d" name="measured_substance_label">
+      <properties>
+        <caption>measured_substance_label</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <key-ref id="b554bb2f-094a-4e07-aed1-96b898b3eb88"></key-ref>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+  </attributes>
+  <dimensions>
+    <dimension id="42b038b1-df84-4a3c-5ed2-0ef061253117" name="Country">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="0ce3759f-489f-4a1e-8462-9951eca18c56" name="Country">
+        <properties>
+          <caption>Country</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="e2c54cb6-7807-47e7-507d-3f97c656a357">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="af4e1e6d-a2b9-40f3-576b-c063c53c4d13">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+          <keyed-attribute-ref attribute-id="b5b0af9d-3fc4-46aa-5451-903c13620b70">
+            <properties>
+              <multiplicity></multiplicity>
+            </properties>
+          </keyed-attribute-ref>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="cdcca5f0-0ae7-4b73-5991-3a3f66fffec5" name="Measured_substance">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="f744c9f6-f91b-4c3b-9728-a8afa99ffa20" name="Measured_substance">
+        <properties>
+          <caption>Measured_substance</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="fdb2268d-8cea-46c8-55c1-29e0eafeb528">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+          <keyed-attribute-ref attribute-id="a999fad1-d0b6-4481-6193-c1a95553a1e6">
+            <properties>
+              <multiplicity></multiplicity>
+            </properties>
+          </keyed-attribute-ref>
+        </level>
+      </hierarchy>
+    </dimension>
+  </dimensions>
+  <data-sets>
+    <data-set id="1667cc19-a999-4526-63b2-4f67bc49aac8" name="waterBodyCategories">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <table>
+          <schema>dc_data_teccod</schema>
+          <name>waterBodyCategories</name>
+        </table>
+        <immutable>false</immutable>
+        <column>
+          <name>id</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Label</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Notation</name>
+          <type>String</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="71f74b77-7532-4ae4-4707-66b84960c233" name="waterName">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <table>
+          <schema>dc_data_teccod</schema>
+          <name>waterName</name>
+        </table>
+        <immutable>false</immutable>
+        <column>
+          <name>Label</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Notation</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Status</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>AcceptedDate</name>
+          <type>Date</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="f3858f0b-d940-4164-acdb-0992225db6ab" unique="false" complete="true">
+          <column>Notation</column>
+        </key-ref>
+        <key-ref id="9e2062ad-5c97-4ac4-9f66-8233ddd3e637" unique="false" complete="true">
+          <column>Label</column>
+        </key-ref>
+        <key-ref id="d9d66f17-c78a-418c-9a9f-77e52f3e798d" unique="false" complete="true">
+          <column>Label</column>
+        </key-ref>
+        <attribute-ref id="af4e1e6d-a2b9-40f3-576b-c063c53c4d13" complete="true">
+          <column>Notation</column>
+        </attribute-ref>
+        <attribute-ref id="b5b0af9d-3fc4-46aa-5451-903c13620b70" complete="true">
+          <column>Label</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+    <data-set id="bbf94098-ed83-4cf6-63a0-fd3066102373" name="waterObservedProperty">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <table>
+          <schema>dc_data_teccod</schema>
+          <name>waterObservedProperty</name>
+        </table>
+        <immutable>false</immutable>
+        <column>
+          <name>URI</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Label</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Definition</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Notation</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Status</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>AcceptedDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>hasWFDQualityElement</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>hasCombinationTableDeterminandUom</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>skos_exactMatch</name>
+          <type>String</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="fa5d8d20-03fd-46d8-a3c3-1c518bbf65f5" unique="false" complete="true">
+          <column>Notation</column>
+        </key-ref>
+        <key-ref id="0b730183-ddf1-4398-8ae1-5e62d9fae39d" unique="false" complete="true">
+          <column>Label</column>
+        </key-ref>
+        <key-ref id="b554bb2f-094a-4e07-aed1-96b898b3eb88" unique="false" complete="true">
+          <column>Label</column>
+        </key-ref>
+        <attribute-ref id="fdb2268d-8cea-46c8-55c1-29e0eafeb528" complete="true">
+          <column>Notation</column>
+        </attribute-ref>
+        <attribute-ref id="a999fad1-d0b6-4481-6193-c1a95553a1e6" complete="true">
+          <column>Label</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+    <data-set id="67b96a35-e6b6-4d2b-5e4e-172560b60471" name="waterPollution">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <table>
+          <schema>dc_data_teccod</schema>
+          <name>waterPollution</name>
+        </table>
+        <immutable>false</immutable>
+        <column>
+          <name>parameterWaterBodyCategory</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>observedPropertyDeterminandCode</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>procedureAnalysedFraction</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>procedureAnalysedMedia</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>resultUom</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>phenomenonTimeReferenceYear</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>parameterSamplingPeriod</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>resultMeanValue</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>waterBodyIdentifier</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Country</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>PopulationDensity</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>TerraMarineProtected_2016_2018</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>TouristMean_1990_2020</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>VenueCount</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>netMigration_2011_2018</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>droughts_floods_temperature</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>literacyRate_2010_2018</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>combustibleRenewables_2009_2014</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>gdp</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_food_organic_waste_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_glass_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_metal_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_other_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_paper_cardboard_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_plastic_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_rubber_leather_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_wood_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>composition_yard_garden_green_waste_percent</name>
+          <type>Double</type>
+        </column>
+        <column>
+          <name>waste_treatment_recycling_percent</name>
+          <type>Double</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="a0cb33a3-6c4e-451e-a185-ae5463a3bea0" unique="false" complete="true">
+          <column>Country</column>
+        </key-ref>
+        <attribute-ref id="e2c54cb6-7807-47e7-507d-3f97c656a357" complete="true">
+          <column>Country</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+  </data-sets>
+  <cubes>
+    <cube id="71654f4c-bca8-4050-606c-25abe4d10b9d" name="data">
+      <properties>
+        <caption>data</caption>
+        <visible>false</visible>
+      </properties>
+      <attributes>
+        <attribute-key id="8d28b4ec-1e5e-4a4c-ad69-4e90ac3e8b8b">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="4c6a0bda-afa2-42f0-ab4c-35a49e01474b">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="a3606241-01c1-43aa-b0d9-972bb881f9f7">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="19ff8bbc-4bf1-4a96-8d0c-1d317a1db71f">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <keyed-attribute id="b2e05fd2-6c9f-485a-9f08-c593d22a1df1" key-ref="4c6a0bda-afa2-42f0-ab4c-35a49e01474b" name="YearNum">
+          <properties>
+            <caption>YearNum</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="35be6b9d-ccb7-449c-9717-a397ae7a5e05" key-ref="a3606241-01c1-43aa-b0d9-972bb881f9f7" name="Parameter_Water_Body_Category">
+          <properties>
+            <caption>Parameter_Water_Body_Category</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="82026467-281d-4319-b32e-636ec869c364" key-ref="19ff8bbc-4bf1-4a96-8d0c-1d317a1db71f" name="Result_Uom">
+          <properties>
+            <caption>Result_Uom</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+          </properties>
+        </keyed-attribute>
+        <attribute id="6148eb1e-8bbb-4b84-b1d9-5adeee268914" name="Ammount">
+          <properties>
+            <caption>Ammount</caption>
+            <visible>true</visible>
+            <type>
+              <count-nonnull>
+                <key-ref id="8d28b4ec-1e5e-4a4c-ad69-4e90ac3e8b8b"></key-ref>
+              </count-nonnull>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="c349d65e-c3b8-43e9-8eff-c6577c5b2e93" name="ResultMeanValue">
+          <properties>
+            <caption>ResultMeanValue</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="8f2934a2-9ca3-46b3-8595-d49dd8e97a3e" name="m_composition_food_organic_waste_percent_avg">
+          <properties>
+            <caption>Composition Food Organizationanic Waste Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="fa7184e5-20ba-429c-b2a3-777ccdc12877" name="m_composition_glass_percent_avg">
+          <properties>
+            <caption>Composition Glass Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="f73ef026-c549-407e-91de-fc202f3e4cf7" name="m_composition_metal_percent_avg">
+          <properties>
+            <caption>Composition Metal Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="222b9805-105c-438f-842f-d68ccb96c073" name="m_composition_other_percent_avg">
+          <properties>
+            <caption>Composition Other Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="beb4d7b0-d94a-47e5-9950-12ccc188f0bb" name="m_composition_paper_cardboard_percent_avg">
+          <properties>
+            <caption>Composition Pa Per Cardboard Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="2d85492e-1776-48d2-a4c2-ae4557091479" name="m_composition_plastic_percent_avg">
+          <properties>
+            <caption>Composition Plastic Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="61e86b6f-4e33-4026-a9a9-40995b4555cf" name="m_composition_yard_garden_green_waste_percent_avg">
+          <properties>
+            <caption>Composition Yard Garden Green Waste Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="5e14988a-d67c-4e9d-a18e-8f6b51f25a36" name="m_composition_wood_percent_avg">
+          <properties>
+            <caption>Composition Wood Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="81c19d04-d29b-40c8-bac4-09a256c10494" name="m_composition_rubber_leather_percent_avg">
+          <properties>
+            <caption>Composition Rubber Leather Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="5718d911-0610-4aa8-a2e9-be60ccb23fec" name="m_waste_treatment_recycling_percent_avg">
+          <properties>
+            <caption>Waste Treatment Recycl Ing Percent</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="2433b054-6c0d-44ac-a123-840e057fa0fc" name="m_gdp_avg">
+          <properties>
+            <caption>Gdp</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="fced97d9-2ccd-499a-9e7f-a1f4cb746be8" name="m_netMigration_2011_2018_avg">
+          <properties>
+            <caption>Net Migration 2011 2018</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="35d2125a-b769-488d-be4b-269f20f2fb97" name="m_TerraMarineProtected_2016_2018_avg">
+          <properties>
+            <caption>Terra Mar Ine Protected 2016 2018</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="99cdbd69-ae46-4292-a633-a32995fbaa0d" name="m_TouristMean_1990_2020_avg">
+          <properties>
+            <caption>Tour Ist Mean 1990 2020</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="7456468c-bf40-45f9-8c7d-68e7d07a3f60" name="m_literacyRate_2010_2018_avg">
+          <properties>
+            <caption>Literacy Rate 2010 2018</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="276948b4-837c-4be8-b36c-b00128b1f28e" name="m_PopulationDensity_avg">
+          <properties>
+            <caption>Population Density</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+      </attributes>
+      <dimensions>
+        <dimension id="a05e5b09-639d-4f1f-8125-402c0a68526b" name="Year">
+          <properties>
+            <visible>true</visible>
+          </properties>
+          <hierarchy id="e62f0174-9f63-471e-8fa3-4ef90425a0fa" name="YearNum">
+            <properties>
+              <caption>YearNum</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="b2e05fd2-6c9f-485a-9f08-c593d22a1df1">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+        </dimension>
+        <dimension id="fd13ffe4-d05e-4daf-aff4-ba9d479e921d" name="Parameter_Water_Body_Category">
+          <properties>
+            <visible>true</visible>
+          </properties>
+          <hierarchy id="6350e4e8-6251-4426-ac0f-bf2f86e3b47c" name="Parameter_Water_Body_Category">
+            <properties>
+              <caption>Parameter_Water_Body_Category</caption>
+              <visible>true</visible>
+              <filter-empty>Always</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="35be6b9d-ccb7-449c-9717-a397ae7a5e05">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+        </dimension>
+        <dimension id="5db39fd9-3c22-43bc-a85d-e0ba25d17fa1" name="Result_Uom">
+          <properties>
+            <visible>true</visible>
+          </properties>
+          <hierarchy id="524837c9-8edb-469b-8584-320096c15d37" name="Result_Uom">
+            <properties>
+              <caption>Result_Uom</caption>
+              <visible>true</visible>
+              <filter-empty>Always</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="82026467-281d-4319-b32e-636ec869c364">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+        </dimension>
+      </dimensions>
+      <actions>
+        <properties>
+          <include-default-drill-through>true</include-default-drill-through>
+        </properties>
+      </actions>
+      <data-sets>
+        <data-set-ref id="67b96a35-e6b6-4d2b-5e4e-172560b60471">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="8d28b4ec-1e5e-4a4c-ad69-4e90ac3e8b8b" unique="false" complete="true">
+              <column>resultMeanValue</column>
+            </key-ref>
+            <key-ref id="4c6a0bda-afa2-42f0-ab4c-35a49e01474b" unique="false" complete="true">
+              <column>phenomenonTimeReferenceYear</column>
+            </key-ref>
+            <key-ref id="a3606241-01c1-43aa-b0d9-972bb881f9f7" unique="false" complete="true">
+              <column>parameterWaterBodyCategory</column>
+            </key-ref>
+            <key-ref id="19ff8bbc-4bf1-4a96-8d0c-1d317a1db71f" unique="false" complete="true">
+              <column>resultUom</column>
+            </key-ref>
+            <key-ref id="a0cb33a3-6c4e-451e-a185-ae5463a3bea0" unique="false" complete="false">
+              <column>Country</column>
+            </key-ref>
+            <key-ref id="f3858f0b-d940-4164-acdb-0992225db6ab" unique="false" complete="false">
+              <column>waterBodyIdentifier</column>
+            </key-ref>
+            <key-ref id="fa5d8d20-03fd-46d8-a3c3-1c518bbf65f5" unique="false" complete="false">
+              <column>observedPropertyDeterminandCode</column>
+            </key-ref>
+            <attribute-ref id="b2e05fd2-6c9f-485a-9f08-c593d22a1df1" complete="true">
+              <column>phenomenonTimeReferenceYear</column>
+            </attribute-ref>
+            <attribute-ref id="c349d65e-c3b8-43e9-8eff-c6577c5b2e93" complete="true">
+              <column>resultMeanValue</column>
+            </attribute-ref>
+            <attribute-ref id="8f2934a2-9ca3-46b3-8595-d49dd8e97a3e" complete="true">
+              <column>composition_food_organic_waste_percent</column>
+            </attribute-ref>
+            <attribute-ref id="fa7184e5-20ba-429c-b2a3-777ccdc12877" complete="true">
+              <column>composition_glass_percent</column>
+            </attribute-ref>
+            <attribute-ref id="f73ef026-c549-407e-91de-fc202f3e4cf7" complete="true">
+              <column>composition_metal_percent</column>
+            </attribute-ref>
+            <attribute-ref id="222b9805-105c-438f-842f-d68ccb96c073" complete="true">
+              <column>composition_other_percent</column>
+            </attribute-ref>
+            <attribute-ref id="beb4d7b0-d94a-47e5-9950-12ccc188f0bb" complete="true">
+              <column>composition_paper_cardboard_percent</column>
+            </attribute-ref>
+            <attribute-ref id="2d85492e-1776-48d2-a4c2-ae4557091479" complete="true">
+              <column>composition_plastic_percent</column>
+            </attribute-ref>
+            <attribute-ref id="61e86b6f-4e33-4026-a9a9-40995b4555cf" complete="true">
+              <column>composition_yard_garden_green_waste_percent</column>
+            </attribute-ref>
+            <attribute-ref id="5e14988a-d67c-4e9d-a18e-8f6b51f25a36" complete="true">
+              <column>composition_wood_percent</column>
+            </attribute-ref>
+            <attribute-ref id="81c19d04-d29b-40c8-bac4-09a256c10494" complete="true">
+              <column>composition_rubber_leather_percent</column>
+            </attribute-ref>
+            <attribute-ref id="5718d911-0610-4aa8-a2e9-be60ccb23fec" complete="true">
+              <column>waste_treatment_recycling_percent</column>
+            </attribute-ref>
+            <attribute-ref id="2433b054-6c0d-44ac-a123-840e057fa0fc" complete="true">
+              <column>gdp</column>
+            </attribute-ref>
+            <attribute-ref id="fced97d9-2ccd-499a-9e7f-a1f4cb746be8" complete="true">
+              <column>netMigration_2011_2018</column>
+            </attribute-ref>
+            <attribute-ref id="35d2125a-b769-488d-be4b-269f20f2fb97" complete="true">
+              <column>TerraMarineProtected_2016_2018</column>
+            </attribute-ref>
+            <attribute-ref id="99cdbd69-ae46-4292-a633-a32995fbaa0d" complete="true">
+              <column>TouristMean_1990_2020</column>
+            </attribute-ref>
+            <attribute-ref id="7456468c-bf40-45f9-8c7d-68e7d07a3f60" complete="true">
+              <column>literacyRate_2010_2018</column>
+            </attribute-ref>
+            <attribute-ref id="276948b4-837c-4be8-b36c-b00128b1f28e" complete="true">
+              <column>PopulationDensity</column>
+            </attribute-ref>
+            <attribute-ref id="35be6b9d-ccb7-449c-9717-a397ae7a5e05" complete="true">
+              <column>parameterWaterBodyCategory</column>
+            </attribute-ref>
+            <attribute-ref id="82026467-281d-4319-b32e-636ec869c364" complete="true">
+              <column>resultUom</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="bbf94098-ed83-4cf6-63a0-fd3066102373">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="fa5d8d20-03fd-46d8-a3c3-1c518bbf65f5" unique="false" complete="false">
+              <column>Notation</column>
+            </key-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="71f74b77-7532-4ae4-4707-66b84960c233">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="f3858f0b-d940-4164-acdb-0992225db6ab" unique="false" complete="false">
+              <column>Notation</column>
+            </key-ref>
+          </logical>
+        </data-set-ref>
+      </data-sets>
+      <calculated-members></calculated-members>
+      <aggregates></aggregates>
+    </cube>
+  </cubes>
+</schema>
