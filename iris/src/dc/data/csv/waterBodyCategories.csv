@@ -1,0 +1,8 @@
+id,Label,Notation
+CW,Coastal water body,CW
+GW,Groundwater body,GW
+LW,Lake water body,LW
+MW,Marine waters,MW
+RW,River water body,RW
+TW,Transitional water body,TW
+TeW,Territorial waters,TeW

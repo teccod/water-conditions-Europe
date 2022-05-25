@@ -1,0 +1,91 @@
+URI,Label,Definition,Notation,AcceptedDate
+http://dd.eionet.europa.eu/vocabulary/wise/uom/1000000m3,cubic hectometre,Volume unit. Conversion factor: 1m3 = 10^-6 hm3. Equivalent to a million cubic metre.,hm3,2016-11-28
+http://dd.eionet.europa.eu/vocabulary/wise/uom/1000m3,cubic decametre,Volume unit. Conversion factor: 1m3 = 10^-3 dam3. Equivalent to a thousand cubic metre.,dam3,2016-11-28
+http://dd.eionet.europa.eu/vocabulary/wise/uom/1000t.a-1,thousand tonnes per year,Mass flow rate. Conversion factor: 1 kg/s = 31536 t/a. Used for loads or emissions of nutrients of oxygen consuming substances.,1000.t/a,2016-11-28
+http://dd.eionet.europa.eu/vocabulary/wise/uom/Bq,becquerel,Radioactivity unit. SI unit.,Bq,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/Cel,degree Celsius,Temperature unit. Expressed in degree Celsius.,Cel,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/K,degree Kelvin,Temperature unit. SI base unit.,K,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/M{EUR},Million Euro,Currency unit.,M{EUR},2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/S.m-1,siemens per metre,Electrical conductivity unit. SI unit.,S/m,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/[CFU],Colony Forming Unit,Colony Forming Unit.,[CFU],2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/[CFU].L-1,Colony Forming Unit per litre,Colony Forming Unit per liter.,[CFU]/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/[CFU].dL-1,Colony Forming Unit per deciliter,Colony Forming Unit per deciliter.,[CFU]/dL,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/[pH],pH,pH unit.,[pH],2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/[ppm],parts per million,Parts per million. Dimensionless quantity.,[ppm],2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/[ppth],parts per thousand,Parts per thousand. Dimensionless quantity.,[ppth],2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/a,year,Time unit.,a,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/d,day,Time unit.,d,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/eq,equivalent,"Amount of substance unit. Expressed in equivalent, which equals the amount of substance in moles time the valence of the ion.",eq,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/eq.L-1,equivalent per litre,"Amount of substance concentration unit. Expressed in equivalent per litre, which equals the amount of substance in moles time the valence of the ion divided by the volume in litre.",eq/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/kg,kilogram,Mass unit. SI base unit.,kg,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/kg.a-1,kilogram per year,Mass flow rate. Conversion factor: 1 kg/s = 31536000 kg/a. Used for loads or emissions of hazardous substances.,kg/a,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/kg.m-3,kilogram per cubic metre,Mass concentration unit. SI unit.,kg/m3,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/kg.s-1,kilogram per second,Mass flow rate. SI unit.,kg/s,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/km,kilometre,Length unit. Conversion factor: 1m=10^-3km,km,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/km2,square kilometre,Area unit. Conversion factor: 1m2=10^-6km2,km2,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/m,metre,Length unit. SI base unit.,m,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/m2,square metre,Area unit. SI unit.,m2,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/m3,cubic metre,Volume unit. SI unit,m3,2016-11-28
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mS.cm-1,millisiemens per centimetre,Electrical conductivity unit. Conversion factor: 1 S/m = 10 mS/cm,mS/cm,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/meq.L-1,miliequivalent per litre,Amount of substance concentration unit. Conversion factor: 1eq/L=10^3meq/L,meq/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg.L-1,milligram per litre,Mass concentration unit. Conversion factor: 1 kg/m3 = 10^3 mg/L,mg/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg.g-1,milligram per gram,Mass ratio unit. Conversion factor: 1 kg/kg = 10^3 mg/g,mg/g,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg.kg-1,milligram per kilogram,Mass ratio unit. Conversion factor: 1 kg/kg = 10^6 mg/kg,mg/kg,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg.m-3,milligram per cubic metre,Mass concentration unit. Conversion factor: 1 kg/m3 = 10^-6 mg/m3,mg/m3,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{CaCO3}.L-1,milligram of Calcium Carbonate per litre,Mass concentration unit. Expressed in mass of Calcium Carbonate per volume.,mg{CaCO3}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{Ca}.L-1,milligram of Calcium per litre,Mass concentration unit. Expressed in mass of Calcium per volume.,mg{Ca}/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{Cl}.L-1,milligram of Chlorine per litre,Mass concentration unit. Expressed in mass of Chlorine per volume.,mg{Cl}/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{C}.L-1,milligram of Carbon per litre,Mass concentration unit. Expressed in mass of Carbon per volume.,mg{C}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{Mg}.L-1,milligram of Magnesium per litre,Mass concentration unit. Expressed in mass of Magnesium per volume.,mg{Mg}/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{NH3}.L-1,milligram of Ammonia per litre,Mass concentration unit. Expressed in mass of Ammonia per volume.,mg{NH3}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{NH4}.L-1,milligram of Ammonium per litre,Mass concentration unit. Expressed in mass of Ammonium per volume.  Conversion factor: 1 mg{N}/L = 1.2888 mg{NH4}/L,mg{NH4}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{NO2}.L-1,milligram of Nitrite per litre,Mass concentration unit. Expressed in mass of Nitrite per volume. Conversion factor: 1 mg{N}/L = 3.2845 mg{NO2}/L,mg{NO2}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{NO3}.L-1,milligram of Nitrate per litre,Mass concentration unit. Expressed in mass of Nitrate per volume. Conversion factor: 1 mg{N}/L = 4.4268 mg{NO3}/L,mg{NO3}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{N}.L-1,milligram of Nitrogen per litre,Mass concentration unit. Expressed in mass of Nitrogen per volume.,mg{N}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{O2}.L-1,milligram of Oxygen per litre,Mass concentration unit. Expressed in mass of Oxygen per volume.,mg{O2}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{PO4}.L-1,milligram of Phosphate per litre,Mass concentration unit. Expressed in mass of Phosphate per volume. Conversion factor: 1 mg{P}/L = 3.0662 mg{PO4}/L,mg{PO4}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{PO4}.m-3,milligram of Phosphate per cubic meter,Mass concentration unit. Expressed in mass of Phosphate per volume. Conversion factor: 1 mg{P}/m3 = 3.0662 mg{PO4}/m3,mg{PO4}/m3,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{P}.L-1,milligram of Phosphorus per litre,Mass concentration unit. Expressed in mass of Phosphorus per volume.,mg{P}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{P}.m-3,milligram of Phosphorus per cubic meter,Mass concentration unit. Expressed in mass of Phosphorus per volume.,mg{P}/m3,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{SO4}.L-1,milligram of Sulphate per litre,Mass concentration unit. Expressed in mass of Sulphate per volume.,mg{SO4}/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{SiO3}.L-1,milligram of Silicate per litre,Mass concentration unit. Expressed in mass of Silicate per volume. Conversion factor: 1 mg{Si}/L = 2.7090 mg{SiO3}/L,mg{SiO3}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{Si}.L-1,milligram of Silicon per litre,Mass concentration unit. Expressed in mass of Silicon per volume.,mg{Si}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mg{S}.L-1,milligram of Sulphur per litre,Mass concentration unit. Expressed in mass of Sulfur per volume.,mg{S}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mmol.L-1,millimole per litre,Amount of substance concentration unit. Conversion factor: 1 mol/m3 = 1 mmol/L,mmol/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mo,month,Time unit.,mo,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mol,mole,Amount of substance unit. SI base unit.,mol,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mol.L-1,mole per litre,Amount of substance concentration unit. Conversion factor: 1 mol/m3 = 10^-3 mol/L,mol/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/mol.m-3,mole per cubic metre,Amount of substance concentration unit. SI unit.,mol/m3,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ng.L-1,nanogram per litre,Mass concentration unit. Conversion factor: 1 kg/m3 = 10^9 ug/L,ng/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ng.g-1,nanogram per gram,Mass ratio unit. Conversion factor: 1 kg/kg = 10^9 ng/g,ng/g,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ng.kg-1,nanogram per kilogram,Mass ratio unit. Conversion factor: 1 kg/kg = 10^12 ng/kg,ng/kg,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/percent,percent,Percent. Dimensionless quantity.,%,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/percent{oxygenSaturation},percent Oxygen saturation,Dissolved Oxygen percent saturation.,%{oxygenSaturation},2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/s,second,Time unit. SI base unit.,s,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/t.a-1,tonne per year,Mass flow rate. Conversion factor: 1 kg/s = 31560 t/a. Used for loads or emissions of nutrients of oxygen consuming substances.,t/a,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/uS.cm-1,microsiemens per centimetre,Electrical conductivity unit. Conversion factor: 1 S/m = 10^4 uS/cm,uS/cm,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/uS.m-1,microsiemens per metre,Electrical conductivity unit. Conversion factor: 1 S/m = 10^6 uS/m,uS/m,2018-10-22
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ueq.L-1,microequivalent per litre,Amount of substance concentration unit. Conversion factor: 1eq/L=10^6ueq/L,ueq/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ug.L-1,microgram per litre,Mass concentration unit. Conversion factor: 1 kg/m3 = 10^6 ug/L,ug/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ug.g-1,microgram per gram,Mass ratio unit. Conversion factor: 1 kg/kg = 10^6 ug/g,ug/g,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ug.kg-1,microgram per kilogram,Mass ratio unit. Conversion factor: 1 kg/kg = 10^9 ug/kg,ug/kg,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ug{N}.L-1,microgram of Nitrogen per litre,Mass concentration unit. Expressed in mass of Nitrogen per volume.,ug{N}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ug{P}.L-1,microgram of Phosphorus per litre,Mass concentration unit. Expressed in mass of Phosphorus per volume.,ug{P}/L,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/ug{TEQ}.kg-1,microgram TEQ per kilogram,Toxic equivalent (TEQ). Weighted mass ratio unit.,ug{TEQ}/kg,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/umol.L-1,micromole per litre,Amount of substance concentration unit. Conversion factor: 1 mol/m3 = 10^3 umol/L,umol/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/umol{C}.L-1,micromole of Carbon per litre,Amount of substance concentration unit. Expressed in amount of Carbon per volume.,umol{C}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/umol{N}.L-1,micromole of Nitrogen per litre,Amount of substance concentration unit. Expressed in amount of Nitrogen per volume.,umol{N}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/umol{O2}.L-1,micromole of Oxygen molecules per litre,Amount of substance concentration unit. Expressed in amount of Oxygen molecules per volume.,umol{O2}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/umol{P}.L-1,micromole of Phosphorus per litre,Amount of substance concentration unit. Expressed in amount of Phosphorus per volume.,umol{P}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/umol{Si}.L-1,micromole of Silicon per litre,Amount of substance concentration unit. Expressed in amount of Silicon per volume.,umol{Si}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/umol{S}.L-1,micromole of Sulfur per litre,Amount of substance concentration unit. Expressed in amount of Sulfur molecules per volume.,umol{S}/L,2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{EQR},Ecological Quality Ratio,Ecological quality ratio.,{EQR},2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{EUR},Euro,Currency unit.,{EUR},2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{EUR}.a-1,Euro per year,Cost unit.,{EUR}/a,2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{FNU},Formazin Nephelometric Unit,Formazin Nephelometric Unit. See ISO 7027-1:2016.,{FNU},2022-02-25
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{NTU},Nephelometric Turbidity Unit,Nephelometric turbidity unit. See http://coastwatch.pfeg.noaa.gov/erddap/convert/units.html,{NTU},2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{PSU},Practical Salinity Unit,Salinity unit. See http://unitsofmeasure.org/trac/ticket/27,{PSU},2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{massRatio},mass ratio,Mass ratio unit. Dimensionless: kg/kg,{massRatio},2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{molarRatio},molar ratio,Amount of substance ratio. Dimentionless: mol/mol,{molarRatio},2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{presence},presence or absence,Presence or absence of a given property.,{presence},2016-09-08
+http://dd.eionet.europa.eu/vocabulary/wise/uom/{ratio},ratio,Ratio. Dimensionless quantity.,{ratio},2016-09-08
