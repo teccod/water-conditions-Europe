@@ -1,5 +1,5 @@
 /// 
-Class dc.data.teccod.weaterValueNorm Extends %Persistent [ ClassType = persistent, DdlAllowed, Final, Owner = {irisowner}, ProcedureBlock, SqlRowIdPrivate, SqlTableName = weaterValueNorm ]
+Class dc.data.teccod.waterValueNorm Extends %Persistent [ ClassType = persistent, DdlAllowed, Final, Owner = {irisowner}, ProcedureBlock, SqlRowIdPrivate, SqlTableName = waterValueNorm ]
 {
 
 Property Heavymetal As %Library.String(MAXLEN = 250) [ SqlColumnNumber = 2, SqlFieldName = Heavy_metal ];
@@ -21,7 +21,7 @@ Index DDLBEIndex [ Extent, SqlName = "%%DDLBEIndex", Type = bitmap ];
 
 Storage Default
 {
-<Data name="weaterValueNormDefaultData">
+<Data name="waterValueNormDefaultData">
 <Value name="1">
 <Value>Heavymetal</Value>
 </Value>
@@ -42,7 +42,7 @@ Storage Default
 </Value>
 </Data>
 <DataLocation>^dc.data.teccod.wValueNorm.1</DataLocation>
-<DefaultData>weaterValueNormDefaultData</DefaultData>
+<DefaultData>waterValueNormDefaultData</DefaultData>
 <ExtentLocation>^dc.data.teccod.wValueNorm</ExtentLocation>
 <ExtentSize>0</ExtentSize>
 <IdFunction>sequence</IdFunction>
