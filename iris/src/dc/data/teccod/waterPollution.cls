@@ -1,5 +1,5 @@
 /// 
-Class dc.data.teccod.waterPollution Extends %Persistent
+Class dc.data.teccod.waterPollution Extends %Persistent [ DependsOn = (dc.data.teccod.waterBodyCategories, dc.data.teccod.waterObservedProperty, dc.data.teccod.waterResultUom, dc.data.teccod.waterValueNorm) ]
 {
 
 Property parameterWaterBodyCategory As %Library.String(MAXLEN = 250) [ SqlColumnNumber = 2 ];
@@ -60,13 +60,13 @@ Property compositionyardgardengreenwastepercent As %Library.Double [ SqlColumnNu
 
 Property wastetreatmentrecyclingpercent As %Library.Double [ SqlColumnNumber = 30, SqlFieldName = waste_treatment_recycling_percent ];
 
-Property idwaterbodycategories As %Library.Integer(MAXVAL = 2147483647, MINVAL = -2147483648) [ SqlColumnNumber = 31, SqlFieldName = id_waterbodycategories ];
+Property idwaterbodycategories As dc.data.teccod.waterBodyCategories [ SqlColumnNumber = 31, SqlFieldName = id_waterbodycategories ];
 
-Property idwatername As %Library.Integer(MAXVAL = 2147483647, MINVAL = -2147483648) [ SqlColumnNumber = 32, SqlFieldName = id_watername ];
+Property idwatername As dc.data.teccod.waterName [ SqlColumnNumber = 32, SqlFieldName = id_watername ];
 
-Property idwaterobservedproperty As %Library.Integer(MAXVAL = 2147483647, MINVAL = -2147483648) [ SqlColumnNumber = 33, SqlFieldName = id_waterobservedproperty ];
+Property idwaterobservedproperty As dc.data.teccod.waterObservedProperty [ SqlColumnNumber = 33, SqlFieldName = id_waterobservedproperty ];
 
-Property idwaterresultuom As %Library.Integer(MAXVAL = 2147483647, MINVAL = -2147483648) [ SqlColumnNumber = 34, SqlFieldName = id_waterresultuom ];
+Property idwaterresultuom As dc.data.teccod.waterResultUom [ SqlColumnNumber = 34, SqlFieldName = id_waterresultuom ];
 
 Storage Default
 {
