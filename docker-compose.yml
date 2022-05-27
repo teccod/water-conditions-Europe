@@ -17,7 +17,7 @@ services:
       - ./iris/src:/opt/irisapp/src
 
   atscale:
-    image: ghcr.io/intersystems-community/atscale-server:master
+    image: ghcr.io/intersystems-community/atscale-server:latest
     restart: always
     tty: true
     hostname: atscale
@@ -26,7 +26,6 @@ services:
       - conf:/opt/atscale/conf
       - log:/opt/atscale/log
       - ./atscale-server/atscale.yaml:/root/atscale.yaml
-      - ./atscale-server/src/entrypoint.sh:/root/entrypoint.sh
       - ./atscale-server/src/connections:/root/connections
       - ./atscale-server/src/cubes:/root/cubes
       - ./atscale-server/src/license:/root/license
