@@ -136,44 +136,92 @@ def getter(df):
 ############################################## нужно заполнить данными.
 # использую датафрейм потому что функцию парсинга данных под этот формат писал
 # в папке рядом со скриптом 3 файла, которые сохраняет скрипт обучения и использует этот, если что-то будет переноситься - то вместе с ними.
-input_df = pd.DataFrame(columns = ["observedPropertyDeterminandCode",
-                        "phenomenonTimeReferenceYear",
-                        "parameterSamplingPeriod",
-                        "waterBodyIdentifier",
-                        "Country",
-                        "PopulationDensity",
-                        "TerraMarineProtected_2016_2018",
-                        "TouristMean_1990_2020",
-                        "VenueCount",
-                        "netMigration_2011_2018",
-                        "droughts_floods_temperature",
-                        "literacyRate_2010_2018",
-                        "combustibleRenewables_2009_2014",
-                        "gdp",
-                        "composition_food_organic_waste_percent",
-                        "composition_glass_percent",
-                        "composition_metal_percent",
-                        "composition_other_percent",
-                        "composition_paper_cardboard_percent",
-                        "composition_plastic_percent",
-                        "composition_rubber_leather_percent",
-                        "composition_wood_percent",
-                        "composition_yard_garden_green_waste_percent",
-                        "waste_treatment_recycling_percent",
-                        "resultMeanValue"])
-############################################################
-# rewers substance name and WaterBody name to code
-WaterBody_label = pd.read_csv('WaterBody_label.csv')
-observedPropertyDeterminandCode_label = pd.read_csv('observedPropertyDeterminandCode_label.csv')
+def run_ml_model(observedPropertyDeterminandCode,
+                          phenomenonTimeReferenceYear,
+                          parameterSamplingPeriod,
+                          waterBodyIdentifier,
+                          Country,
+                          PopulationDensity,
+                          TerraMarineProtected_2016_2018,
+                          TouristMean_1990_2020,
+                          VenueCount,
+                          netMigration_2011_2018,
+                          droughts_floods_temperature,
+                          literacyRate_2010_2018,
+                          combustibleRenewables_2009_2014,
+                          gdp,
+                          composition_food_organic_waste_percent,
+                          composition_glass_percent,
+                          composition_metal_percent,
+                          composition_other_percent,
+                          composition_paper_cardboard_percent,
+                          composition_plastic_percent,
+                          composition_rubber_leather_percent,
+                          composition_wood_percent,
+                          composition_yard_garden_green_waste_percent,
+                          waste_treatment_recycling_percent):
+  input_df = pd.DataFrame([[observedPropertyDeterminandCode,
+                          phenomenonTimeReferenceYear,
+                          parameterSamplingPeriod,
+                          waterBodyIdentifier,
+                          Country,
+                          PopulationDensity,
+                          TerraMarineProtected_2016_2018,
+                          TouristMean_1990_2020,
+                          VenueCount,
+                          netMigration_2011_2018,
+                          droughts_floods_temperature,
+                          literacyRate_2010_2018,
+                          combustibleRenewables_2009_2014,
+                          gdp,
+                          composition_food_organic_waste_percent,
+                          composition_glass_percent,
+                          composition_metal_percent,
+                          composition_other_percent,
+                          composition_paper_cardboard_percent,
+                          composition_plastic_percent,
+                          composition_rubber_leather_percent,
+                          composition_wood_percent,
+                          composition_yard_garden_green_waste_percent,
+                          waste_treatment_recycling_percent,0]],
+                          columns = ["observedPropertyDeterminandCode",
+                          "phenomenonTimeReferenceYear",
+                          "parameterSamplingPeriod",
+                          "waterBodyIdentifier",
+                          "Country",
+                          "PopulationDensity",
+                          "TerraMarineProtected_2016_2018",
+                          "TouristMean_1990_2020",
+                          "VenueCount",
+                          "netMigration_2011_2018",
+                          "droughts_floods_temperature",
+                          "literacyRate_2010_2018",
+                          "combustibleRenewables_2009_2014",
+                          "gdp",
+                          "composition_food_organic_waste_percent",
+                          "composition_glass_percent",
+                          "composition_metal_percent",
+                          "composition_other_percent",
+                          "composition_paper_cardboard_percent",
+                          "composition_plastic_percent",
+                          "composition_rubber_leather_percent",
+                          "composition_wood_percent",
+                          "composition_yard_garden_green_waste_percent",
+                          "waste_treatment_recycling_percent",
+                          "resultMeanValue"])
+  ############################################################
+  # rewers substance name and WaterBody name to code
+  WaterBody_label = pd.read_csv('WaterBody_label.csv')
+  observedPropertyDeterminandCode_label = pd.read_csv('observedPropertyDeterminandCode_label.csv')
 
-input_df['waterBodyIdentifier'] = WaterBody_label.loc[WaterBody_label['WaterBody_label'] == input_df['waterBodyIdentifier'].values[0]]['waterBodyIdentifier'].values[0]
-input_df['observedPropertyDeterminandCode'] = observedPropertyDeterminandCode_label.loc[observedPropertyDeterminandCode_label['observedPropertyDeterminandCode_label'] == input_df['observedPropertyDeterminandCode'].values[0]]['observedPropertyDeterminandCode'].values[0]
+  input_df['waterBodyIdentifier'] = WaterBody_label.loc[WaterBody_label['WaterBody_label'] == input_df['waterBodyIdentifier'].values[0]]['waterBodyIdentifier'].values[0]
+  input_df['observedPropertyDeterminandCode'] = observedPropertyDeterminandCode_label.loc[observedPropertyDeterminandCode_label['observedPropertyDeterminandCode_label'] == input_df['observedPropertyDeterminandCode'].values[0]]['observedPropertyDeterminandCode'].values[0]
 
-input_data, y_data = getter(input_df)
-water_model= load_model('water_model.h5')
-pred = water_model.predict(input_data)
-y_scaler = load(open('y_scaler.pkl', 'rb')) 
-pred = y_scaler.inverse_transform(pred)
+  input_data, y_data = getter(input_df)
+  water_model= load_model('water_model.h5')
+  pred = water_model.predict(input_data)
+  y_scaler = load(open('y_scaler.pkl', 'rb')) 
+  pred = y_scaler.inverse_transform(pred)
 
-resultUom = pd.read_csv('resultUom.csv')
-print(round(pred[0][0],2), resultUom.loc[resultUom['observedPropertyDeterminandCode'] == input_df['observedPropertyDeterminandCode'].values[0]]['resultUom'].values[0])# возвращаемое значение
+  resultUom = pd.read_csv('resultUom.csv')
+  return("{'result': '"+ str(round(pred[0][0],2)) + ' ' +  resultUom.loc[resultUom['observedPropertyDeterminandCode'] == input_df['observedPropertyDeterminandCode'].values[0]]['resultUom'].values[0] + '\'}')# возвращаемое значение
