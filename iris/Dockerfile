@@ -17,6 +17,8 @@ RUN iris start IRIS \
 	&& iris session IRIS < /opt/irisapp/iris.script \
 	&& iris stop IRIS quietly
 
+COPY /dsw/irisapp.json /usr/irissys/csp/dsw/configs/
+
 ENV PYTHONPATH=/usr/irissys/bin/irispython
 ENV SRC_PATH=/opt/irisapp
 ENV IRISUSERNAME=SuperUser

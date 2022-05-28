@@ -4,7 +4,9 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 import pandas as pd
 import markdown
-import dashpage.index as dtimeline
+
+import pages.timeline_dash as dtimeline
+import pages.ml.ml_run as ml
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
@@ -31,8 +33,9 @@ sidebar = html.Div(
         dbc.Nav(
             [
                 dbc.NavLink("Home", href="/", active="exact"),
-                dbc.NavLink("Readme", href="/readme", active="exact"),
-                dbc.NavLink("Timeline", href="/timeline", active="exact")
+                # dbc.NavLink("Readme", href="/readme", active="exact"),
+                dbc.NavLink("Timeline", href="/timeline", active="exact"),
+                dbc.NavLink("Form", href="/form", active="exact")
             ],
             vertical=True,
             pills=True,
@@ -55,7 +58,10 @@ def render_page_content(pathname):
             return html.Article(dcc.Markdown(f.read()), className="markdown-body")
 
     elif pathname == "/timeline":
-        return html.Div("dtimeline.GetFigure()")
+        return html.Div(dtimeline.GetFigure())
+
+    elif pathname == "/form":
+        return html.P(ml.test())
 
     return dbc.Jumbotron(
         [

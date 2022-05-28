@@ -4,7 +4,6 @@
     zn "IRISAPP"
     Do EnableDeepSee^%SYS.cspServer("/csp/irisapp/")
     zpm "load /opt/irisapp/ -v -Dfolder=irisapp"
-    zpm "install csvgen"
 
     zn "%SYS"
     Do ##class(Security.Users).UnExpireUserPasswords("*")
