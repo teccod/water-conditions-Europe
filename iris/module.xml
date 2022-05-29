@@ -4,14 +4,14 @@
     <Module>
       <Name>water-conditions-Europe</Name>
       <Version>1.0.0</Version>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
       <Dependencies>
         <ModuleReference>
           <Name>dsw</Name>
           <Version>*</Version>
         </ModuleReference>
       </Dependencies>
-      <Packaging>module</Packaging>
-      <SourcesRoot>src</SourcesRoot>
       <Resource Name="*.DFI"/>
       <Resource Name="dc.data.teccod.PKG"/>
       <Resource Name="dc.teccod.PKG"/>

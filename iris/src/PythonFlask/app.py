@@ -1,11 +1,11 @@
+from importlib.resources import path
 from dash import Dash, Input, Output, dcc, html
-from flask import Flask
+from flask import Flask, render_template
 import plotly.express as px
 import dash_bootstrap_components as dbc
-import pandas as pd
 import markdown
 
-import pages.timeline_dash as dtimeline
+import pages.timeline_dash.index as dtimeline
 import pages.ml.ml_run as ml
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -21,21 +21,21 @@ SIDEBAR_STYLE = {
 }
 
 CONTENT_STYLE = {
-    "margin-left": "18rem",
-    "margin-right": "2rem",
-    "padding": "2rem 1rem",
+    "margin-left": "16rem"
 }
 
 sidebar = html.Div(
     [
-        html.H2("Sidebar", className="display-4"),
+        html.H2("Analytics", className="display-6"),
         html.Hr(),
         dbc.Nav(
             [
                 dbc.NavLink("Home", href="/", active="exact"),
-                # dbc.NavLink("Readme", href="/readme", active="exact"),
                 dbc.NavLink("Timeline", href="/timeline", active="exact"),
-                dbc.NavLink("Form", href="/form", active="exact")
+                dbc.NavLink("IRIS BI", href="/irisbi", active="exact"),
+                dbc.NavLink("Logi report", href="/logi_report", active="exact"),
+                dbc.NavLink("PowerBI report", href="/powerbi_report", active="exact"),
+                dbc.NavLink("Tableau report", href="/tableau_report", active="exact")
             ],
             vertical=True,
             pills=True,
@@ -51,17 +51,33 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/":
-        return html.P("This is the content of the home page!")
-
-    elif pathname == "/readme":
         with open('/irisdev/app/README.md', 'r') as f:
             return html.Article(dcc.Markdown(f.read()), className="markdown-body")
 
     elif pathname == "/timeline":
         return html.Div(dtimeline.GetFigure())
 
-    elif pathname == "/form":
-        return html.P(ml.test())
+    elif pathname == "/logi_report":
+        return html.Iframe(src="assets/All_countries.pdf", 
+            style={"height" : "100vh", "width": "100%", "display" : "flex"}
+        )
+
+    elif pathname == "/powerbi_report":
+        return html.Iframe(
+            src="https://app.powerbi.com/view?r=eyJrIjoiYzYwYTZmZjYtM2E3Mi00NWRjLTk4MmEtN2FhODkxNTU0N2ZjIiwidCI6ImMwNDU1OGJhLWJiMzgtNDQzMC1iMDhkLThlMTYxMmQzY2NkOCIsImMiOjl9",
+            style={"height" : "100vh", "width": "100%", "display" : "flex"}
+        )
+
+    elif pathname == "/tableau_report":
+        return html.Iframe(src="assets/Water Conditions in Europe.pdf", 
+            style={"height" : "100vh", "width": "100%", "display" : "flex"}
+        )
+
+    elif pathname == "/irisbi":
+        return html.Iframe(
+            src="http://localhost:32792/dsw/index.html#/IRISAPP/dc/teccod/dashboards/Overview.dashboard",
+            style={"height" : "100vh", "width": "100%", "display" : "flex"}
+        )
 
     return dbc.Jumbotron(
         [
@@ -72,4 +88,4 @@ def render_page_content(pathname):
     )
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8080, host="0.0.0.0")
+    app.run_server(debug=False, port=8080, host="0.0.0.0")

@@ -12,4 +12,9 @@
     set prop("AutheEnabled")=48
     Do ##class(Security.Services).Modify("%Service_CallIn",.prop)
 
+    set webName = "/mdx2json" 
+    set webProperties("AutheEnabled") = 64 
+    set webProperties("MatchRoles")=":%DB_IRISAPP" 
+    set sc = ##class(Security.Applications).Modify(webName, .webProperties) 
+
     halt

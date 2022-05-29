@@ -13,3 +13,4 @@ dash-daq
 dash-bootstrap-components
 markdown
 JayDeBeApi
+pdfkit
