@@ -24,6 +24,8 @@ Open the terminal in this directory and run:
 $ docker-compose up -d
 ```
 
+The first time launch can take some time because of python libraries installing.
+
 ## App
 
 After installation open http://localhost:8080/
