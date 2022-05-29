@@ -45,16 +45,23 @@ Online demo link : http://atscale.teccod.com:8080/
 
 # Screenshots
 
-## Overview
-
-![image](https://user-images.githubusercontent.com/47400570/155239138-0f614bb0-1fc1-4e19-9b2a-553bc56c2112.png)
-
 ## Timeline
 
-![image](https://user-images.githubusercontent.com/47400570/155239097-a49ab95a-2b03-4170-a59b-8a5616be6962.png)
+![image](https://user-images.githubusercontent.com/41373877/170876352-1a6b14d7-3374-4ad7-8dea-4070c5b90d94.png)
 
-## IRIS python usage
+## IRIS BI
 
-![image](https://user-images.githubusercontent.com/47400570/155239038-99890fe8-ed9d-4a82-bfbe-21bf3d4cd80b.png)
+![image](https://user-images.githubusercontent.com/41373877/170876397-f737be75-08ab-412e-b581-05c3a90686d9.png)
 
+## Logi Report
+
+![image](https://user-images.githubusercontent.com/41373877/170876440-7efc8b77-09f0-4af6-92f3-fa35adaeab60.png)
+
+## PowerBI Report
+
+![image](https://user-images.githubusercontent.com/41373877/170876471-52fd55ad-7ed0-4fe0-9231-132a03c8ac7e.png)
+
+## Tableau Report
+
+![image](https://user-images.githubusercontent.com/41373877/170876511-8694af1d-7210-4e58-bd65-514691c69211.png)
 
