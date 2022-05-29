@@ -1,6 +1,13 @@
 # water-conditions-Europe
 
-This app shows data visualization. For example, Water Conditions in Europe region data was used. The Dash framework used to build Dashboards is a Python framework created by plotly for building interactive web applications. Dash is open source and building an application using this framework is viewed in a web browser.
+This app shows data visualization.
+It uses python ML to predict future values of water conditions.
+It also uses few visualisation machanisms like PowerBI and Tableau by Adaptive Analytics at backend.
+IRIS BI dashboard also included.
+
+For example, Water Conditions in Europe region data was used. 
+The Dash framework used to build Dashboards in a Python framework created by plotly for building interactive web applications. 
+Dash is open source and building an application using this framework is viewed in a web browser.
 
 ## Installation
 
@@ -25,7 +32,7 @@ After you will be redirected to the authorization page. Authorization is based o
 
 ![image](https://user-images.githubusercontent.com/47400570/155238798-4c1ca3b2-e0b9-4ffd-a934-5922f10bb0d5.png)
 
-The main page will show the first dashboard, which visualizes Covid data taken from the local IRIS database
+The main page will show the links to Dashboards, which display different visualisation tools.
 
 On the left is the navigation menu.
 
