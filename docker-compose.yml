@@ -17,7 +17,7 @@ services:
       - ./iris/src:/opt/irisapp/src
 
   atscale:
-    image: ghcr.io/intersystems-community/atscale-server:latest
+    image: docker.io/alex4vk/atscale-server:2021.3.0.3934
     restart: always
     tty: true
     hostname: atscale
