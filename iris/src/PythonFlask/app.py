@@ -1,9 +1,6 @@
-from importlib.resources import path
 from dash import Dash, Input, Output, dcc, html
-from flask import Flask, render_template
-import plotly.express as px
+from flask import request
 import dash_bootstrap_components as dbc
-import markdown
 
 import pages.timeline_dash.index as dtimeline
 import pages.ml.ml_run as ml
@@ -75,7 +72,7 @@ def render_page_content(pathname):
 
     elif pathname == "/irisbi":
         return html.Iframe(
-            src="http://localhost:32792/dsw/index.html#/IRISAPP/dc/teccod/dashboards/Overview.dashboard",
+            src=str(request.base_url.split(":8080/")[0]) + ":32792/dsw/index.html#/IRISAPP/dc/teccod/dashboards/Overview.dashboard",
             style={"height" : "100vh", "width": "100%", "display" : "flex"}
         )
 
