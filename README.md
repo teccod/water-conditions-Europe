@@ -67,3 +67,7 @@ Online demo link : http://atscale.teccod.com:8080/
 
 ![image](https://user-images.githubusercontent.com/41373877/170876511-8694af1d-7210-4e58-bd65-514691c69211.png)
 
+## More info about ML prediction used here
+
+In this article(https://community.intersystems.com/post/comparison-integrated-ml-and-handmade-neural-network-our-dataset) I describe how ML on embedded python used in this project and compare it with IntegratedML test
+
